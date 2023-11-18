@@ -4,16 +4,16 @@ import roles from '../helpers/roles';
 
 const schema = yup.object().shape({
     name: yup
-    .string('El nombre debe ser un texto')
-    .required('Debe ingresar un nombre'),
+    .string('The name must be a text')
+    .required('You must enter a name'),
     email:yup
-    .string( 'El email debe ser un texto')
-    .required('Debe ingresar un correo electrónico')
-    .email ('Debe ingresar un correo electrónico válido'),
+    .string( 'The email must be a text')
+    .required('You must enter an email.')
+    .email ('You must enter a valid email'),
     role:yup
-    .string('El rol debe ser un texto')
+    .string('The role must be a text')
     .oneOf(Object.keys(roles))
-    //.required('Debe ingresar un rol válido')
+    //.required('You must enter a valid role')
     
 })
 export default yupResolver(schema)
