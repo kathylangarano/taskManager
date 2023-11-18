@@ -12,14 +12,14 @@ export default function DeleteModal({isOpen, close}){
     return (
     <Modal show={isOpen} onHide={close}>
         <Modal.Header closeButton>
-            <Modal.Title>Eliminar cuenta</Modal.Title>
+            <Modal.Title>Delete account</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <Alert variant='danger'>¿Estas seguro que deseas eliminar permanentemente tu cuenta?<b>se perderan tus datos</b></Alert>
+            <Alert variant='danger'>¿Are you sure you want to permanently delete your account??<b>your data will be lost</b></Alert>
         </Modal.Body>
         <Modal.Footer>
-            <Button variant='secondary' onClick={close}>Cancelar</Button>
-            <Button variant='danger' onClick={handleDelete}>Eliminar mi cuenta</Button>
+            <Button variant='secondary' onClick={close}>Cancel</Button>
+            <Button variant='danger' onClick={handleDelete}>Delete my account</Button>
         </Modal.Footer>
     </Modal>
     )
