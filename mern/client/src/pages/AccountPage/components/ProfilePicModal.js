@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 export default function ProfilePicModal({isOpen, close}){
     const {updateUser} =useAuth();
 
-    const   [fileName, setFileName] = useState ("Subir una imagen");
+    const   [fileName, setFileName] = useState ("Upload an image");
     const   [selectedFile, setSelectedFile] = useState (null);
 
 
@@ -20,8 +20,8 @@ export default function ProfilePicModal({isOpen, close}){
         
 
 
-        if(!isValidSize) return toast.error('Imagen muy pesada, máximo 50MB')
-        if(!isValidType) return toast.error('Solo puedes subir imágenes')
+        if(!isValidSize) return toast.error('Image too heavy, maximum 50MB')
+        if(!isValidType) return toast.error('Only images can be uploaded.')
 
 
 
@@ -35,7 +35,7 @@ export default function ProfilePicModal({isOpen, close}){
         reader.readAsDataURL(file)
     }
     const handleUpdateProfilePic =() =>{
-        if(!selectedFile) return toast.error('Debes seleccionar una nueva imagen');
+        if(!selectedFile) return toast.error('You must select a new image');
         updateUser({profilePic:selectedFile})
         close()
     }
@@ -46,7 +46,7 @@ export default function ProfilePicModal({isOpen, close}){
     return (
     <Modal show={isOpen} onHide={close}>    
         <Modal.Header closeButton>
-            <Modal.Title>Cambiar mi foto de perfil</Modal.Title>
+            <Modal.Title>Change my profile picture</Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <Form>
@@ -69,8 +69,8 @@ export default function ProfilePicModal({isOpen, close}){
 
         </Modal.Body>
         <Modal.Footer>
-            <Button variant='secondary' onClick={close}>Cancelar</Button>
-            <Button variant='primary' onClick={handleUpdateProfilePic} >Actualizar imagen</Button>
+            <Button variant='secondary' onClick={close}>Cancel</Button>
+            <Button variant='primary' onClick={handleUpdateProfilePic} >Update image</Button>
         </Modal.Footer>
     </Modal>
     )
