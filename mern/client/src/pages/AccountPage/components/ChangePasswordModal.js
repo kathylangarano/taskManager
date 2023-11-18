@@ -9,7 +9,7 @@ export default function ChangePasswordModal ({isOpen, close}){
 
 
     const onSubmit = (formData) => {
-        alert ('Cambiando contraseña')
+        alert ('You are changing your password')
 
     }
 
@@ -23,13 +23,13 @@ export default function ChangePasswordModal ({isOpen, close}){
     return (
     <Modal show={isOpen} onHide={close}>
         <Modal.Header closeButton>
-            <Modal.Title>Cambiar contraseña</Modal.Title>
+            <Modal.Title>Change password</Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Form.Group>
-                    <Form.Label>Nueva contraseña</Form.Label>
-                    <Form.Control type='password'  placeholder='Escribe una nueva contraseña' {...register('password')}/>
+                    <Form.Label>New password</Form.Label>
+                    <Form.Control type='password'  placeholder='Enter a new password' {...register('password')}/>
 
                     {errors?.password &&(
                     <Form.Text>
@@ -43,8 +43,8 @@ export default function ChangePasswordModal ({isOpen, close}){
             </Form>
         </Modal.Body>
         <Modal.Footer>
-            <Button variant='secondary' onClick={close}>Cancelar</Button>
-            <Button variant='primary' onClick={handleSubmit(onSubmit)}>Actualizar contraseña</Button>
+            <Button variant='secondary' onClick={close}>Cancel</Button>
+            <Button variant='primary' onClick={handleSubmit(onSubmit)}>Update password</Button>
         </Modal.Footer>
     </Modal>
     )
