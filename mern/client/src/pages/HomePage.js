@@ -8,19 +8,19 @@ export default function HomePage(){
             <Row className="mt-5">
                 <Col xs={{span:12}} md={{span: 6}} className="m-5">
                 
-                <h2>Bienvenid@ a Gestor de tareas</h2>
-                <p>¡Aquí podrás gestionar tus proyectos!</p>
+                <h2>Bienvenid@ to Task Manager</h2>
+                <p>¡Here you can manage your projects!</p>
                 <p>
-                    Marca tus tareas como terminadas, agrega, elimina, o actualiza. 
+                    Mark your tasks as completed, add, delete, or update. 
                 </p>
                 <div>
-                   <Link  to={routes.login}>Ingresa</Link> o <Button as ={Link} to={routes.register} className='ml-1'>Crea una cuenta</Button>
+                   <Link  to={routes.login}>Enter</Link> or <Button as ={Link} to={routes.register} className='ml-1'>Create an account</Button>
                 </div>
                 </Col>
                 <Col>
 
                 <img className="img-fluid" src='/img/task-manager.svg' alt='gestor-de-tareas'/>
-                <p>¡Gestiona tu tiempo,mejora tu proactividad!</p>
+                <p>¡Manage your time, enhance your proactivity!</p>
                 </Col>
             </Row>
             
