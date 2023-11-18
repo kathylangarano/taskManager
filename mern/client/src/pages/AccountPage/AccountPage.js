@@ -27,13 +27,13 @@ export default function AccountPage(){
                 
                 <Col className="mt-4">
                    <Card style={{maxWidth: '360px' }} className='mx-auto p-4'>
-                      <p className="text-center"><b>Nombre: </b>{user.name}</p>
-                       <p className="text-center"><b>Correo: </b>{user.email}</p>
-                       <p className="text-center"><b>Rol: </b>{user.role}</p>
+                      <p className="text-center"><b>Name: </b>{user && user.name}</p>
+                       <p className="text-center"><b>Email: </b>{user && user.email}</p>
+                       <p className="text-center"><b>Role: </b>{user && user.role}</p>
 
-                       <Button variant='warning' onClick={openEditModal}>Editar cuenta</Button>
-                       <Button variant='link' className="mt-1" onClick={openChangePasswordModal}>Cambiar contraseña</Button>
-                       <Button variant='link' className="mt-3 text-danger" onClick={openDeleteModal}>Eliminar cuenta</Button>
+                       <Button variant='warning' onClick={openEditModal}>Edit account</Button>
+                       <Button variant='link' className="mt-1" onClick={openChangePasswordModal}>Change password</Button>
+                       <Button variant='link' className="mt-3 text-danger" onClick={openDeleteModal}>Delete account</Button>
 
                    </Card>
                 </Col>
