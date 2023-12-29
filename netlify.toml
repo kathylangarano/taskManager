@@ -1,0 +1,4 @@
+[build]
+  base = "mern/client"
+  command = "npm run build"
+  publish = "mern/client/build"
